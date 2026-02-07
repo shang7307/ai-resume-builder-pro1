@@ -1,0 +1,104 @@
+/* ... (Keep existing radiant styles) ... */
+
+/* TEMPLATE 1: CLASSIC (Default) */
+.template-classic .resume-header {
+    text-align: center;
+    border-bottom: 2px solid var(--resume-color);
+    padding-bottom: 20px;
+    background: none;
+    /* Reset gradient */
+}
+
+/* TEMPLATE 2: MODERN (Sidebar Layout) */
+.template-modern {
+    display: grid !important;
+    grid-template-columns: 32% 1fr;
+    grid-template-rows: auto 1fr;
+    column-gap: 25px;
+    padding: 0 !important;
+}
+
+.template-modern .resume-header {
+    grid-column: 1 / -1;
+    background: var(--resume-color);
+    color: white;
+    padding: 30px;
+    margin-bottom: 20px !important;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.template-modern #prev-logo {
+    width: 100px !important;
+    height: 100px !important;
+    margin: 0 !important;
+    border: 3px solid rgba(255, 255, 255, 0.8);
+    box-shadow: none;
+}
+
+.template-modern .resume-name {
+    color: white;
+    margin: 0;
+}
+
+.template-modern #prev-title {
+    color: rgba(255, 255, 255, 0.9) !important;
+    margin-top: 5px;
+}
+
+.template-modern .resume-contact {
+    color: rgba(255, 255, 255, 0.8);
+    justify-content: flex-start;
+    margin-top: 5px;
+}
+
+.template-modern .resume-contact i {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+/* Modern Sidebar: Skills & Contact info usually go here, 
+   but our HTML structure has Contact in Header. 
+   We will move Skills to the Left Column (Sidebar).
+*/
+
+.template-modern #sec-skills {
+    grid-column: 1;
+    grid-row: 2;
+    background: #f8fafc;
+    margin: -20px 0 -20mm 0;
+    /* Bleed down */
+    padding: 20px;
+    border-right: 1px solid #eee;
+}
+
+.template-modern #sec-summary,
+.template-modern #sec-experience {
+    grid-column: 2;
+    padding-right: 20px;
+}
+
+/* TEMPLATE 3: BOLD (Left Accent) */
+.template-bold .resume-header {
+    background: white;
+    border-left: 8px solid var(--resume-color);
+    padding: 20px 0 20px 30px;
+    text-align: left;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.template-bold #prev-logo {
+    margin: 0 !important;
+    border-radius: 12px !important;
+}
+
+.template-bold .section-title {
+    border-bottom: 2px solid #000;
+    color: #000;
+    letter-spacing: 2px;
+    margin-top: 25px;
+}
